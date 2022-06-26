@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToggleButton fx:id="homepageTab" mnemonicParsing="false" onAction="#navigateTab" prefHeight="82.0" prefWidth="150.0" style="-fx-background-color: E6CEB2;" styleClass="tab-button" text="СТАРТ" textAlignment="CENTER">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>            
+            </ToggleButton>
+            <ToggleButton fx:id="trainersTab" mnemonicParsing="false" onAction="#navigateTab" prefHeight="82.0" prefWidth="150.0" style="-fx-background-color: E6CEB2;" text="ТРЕНЕРА" textAlignment="CENTER">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ToggleButton>
+            <ToggleButton fx:id="groupsTab" mnemonicParsing="false" onAction="#navigateTab" prefHeight="82.0" prefWidth="150.0" style="-fx-background-color: E6CEB2;" text="ГРУППЫ" textAlignment="CENTER">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ToggleButton>
+            <ToggleButton fx:id="roomsTab" mnemonicParsing="false" onAction="#navigateTab" prefHeight="82.0" prefWidth="150.0" style="-fx-background-color: E6CEB2;" text="ЗАЛЫ" textAlignment="CENTER">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ToggleButton>
+            <ToggleButton fx:id="timetableTab" mnemonicParsing="false" onAction="#navigateTab" prefHeight="82.0" prefWidth="150.0" style="-fx-background-color: E6CEB2;" text="РАСПИСАНИЕ" textAlignment="CENTER">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ToggleButton>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <StackPane fx:id="paneHolder" prefHeight="150.0" prefWidth="550.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

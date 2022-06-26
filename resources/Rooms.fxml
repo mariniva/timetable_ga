@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Rooms">
+   <children>
+      <AnchorPane prefHeight="374.0" prefWidth="550.0" style="-fx-background-color: FFFADD;">
+         <children>
+            <Text fontSmoothingType="LCD" layoutX="30.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ДОБАВИТЬ ЗАЛ" textAlignment="CENTER">
+               <font>
+                  <Font name="Corbel Bold" size="24.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="newRoomId" layoutX="30.0" layoutY="62.0" prefHeight="46.0" prefWidth="140.0" promptText="ID" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="61.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="newRoomNumber" layoutX="205.0" layoutY="61.0" prefHeight="46.0" prefWidth="140.0" promptText="Номер" AnchorPane.rightAnchor="205.0" AnchorPane.topAnchor="61.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Button layoutX="433.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleNewRoom" style="-fx-background-color: E6CEB2;" text="ДОБАВИТЬ" textAlignment="CENTER" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="119.0">
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font>
+            </Button>
+            <TableView fx:id="roomTable" layoutX="57.0" layoutY="155.0" prefHeight="172.0" prefWidth="467.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="155.0">
+               <columns>
+                  <TableColumn id="roomIdCol" fx:id="roomIDCol" prefWidth="34.0" text="ID" />
+                  <TableColumn id="roomNumberCol" fx:id="roomNumberCol" prefWidth="125.0" text="Номер" />
+                  <TableColumn id="roomCapacityCol" fx:id="roomCapacityCol" prefWidth="125.0" text="Вместимость" />
+               </columns>
+            </TableView>
+            <Button layoutX="30.0" layoutY="342.0" mnemonicParsing="false" onAction="#handleDeleteRoom" style="-fx-background-color: E6CEB2;" text="УДАЛИТЬ ВЫДЕЛЕННОЕ" textAlignment="CENTER" AnchorPane.bottomAnchor="31.0" AnchorPane.rightAnchor="340.0">
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="328.0" layoutY="342.0" mnemonicParsing="false" onAction="#generateTable" style="-fx-background-color: E6CEB2;" text="СОСТАВИТЬ РАСПИСАНИЕ" textAlignment="CENTER">
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="newRoomCapacity" layoutX="380.0" layoutY="62.0" prefHeight="46.0" prefWidth="140.0" promptText="Вместимость">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

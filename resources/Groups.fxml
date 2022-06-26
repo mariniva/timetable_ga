@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Groups">
+   <children>
+      <AnchorPane prefHeight="374.0" prefWidth="550.0" style="-fx-background-color: FFFADD;">
+         <children>
+            <Text fontSmoothingType="LCD" layoutX="30.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ДОБАВИТЬ ГРУППУ" textAlignment="CENTER">
+               <font>
+                  <Font name="Corbel Bold" size="24.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="newGroupId" layoutX="36.0" layoutY="65.0" prefHeight="45.0" prefWidth="108.0" promptText="ID" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="65.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="newGroupShift" layoutX="156.0" layoutY="65.0" prefHeight="46.0" prefWidth="108.0" promptText="Смена" AnchorPane.rightAnchor="286.0" AnchorPane.topAnchor="65.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="newGroupStyles" layoutX="408.0" layoutY="65.0" prefHeight="46.0" prefWidth="108.0" promptText="Стили">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Button layoutX="433.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleNewGroup" style="-fx-background-color: E6CEB2;" text="ДОБАВИТЬ" textAlignment="CENTER" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="119.0">
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font>
+            </Button>
+            <TableView fx:id="groupTable" layoutX="28.0" layoutY="156.0" prefHeight="172.0" prefWidth="495.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="156.0">
+               <columns>
+                  <TableColumn fx:id="groupIDCol" text="ID" />
+                  <TableColumn fx:id="groupShiftCol" prefWidth="122.0" text="Смена" />
+                  <TableColumn fx:id="groupSizeCol" prefWidth="133.0" text="Размер" />
+                  <TableColumn fx:id="groupStyleCol" prefWidth="159.0" text="Стили" />
+               </columns>
+            </TableView>
+            <Button layoutX="350.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleDeleteGroup" style="-fx-background-color: E6CEB2;" text="УДАЛИТЬ ВЫДЕЛЕННОЕ" textAlignment="CENTER" AnchorPane.bottomAnchor="33.0" AnchorPane.rightAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="newGroupSize" layoutX="279.0" layoutY="65.0" prefHeight="46.0" prefWidth="108.0" promptText="Размер">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
